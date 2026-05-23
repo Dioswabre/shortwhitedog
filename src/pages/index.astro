@@ -11,8 +11,11 @@ import Header from '../components/Header.astro';
 	</head>
 	<body>
 		<Header />
+		<div class="hero-image">
+			<img src="/Caio.png" alt="Caio the Sealyham Terrier" />
+		</div>
 		<main>
-			<section class="hero">
+			<section class="hero-text">
 				<h1>Shortwhitedog</h1>
 				<p class="tagline">A Sealyham terrier. In Wales. Living his best life.</p>
 			</section>
@@ -27,24 +30,36 @@ import Header from '../components/Header.astro';
 		min-height: 100vh;
 	}
 
+	:global(.hero-image) {
+		width: 100%;
+		height: 70vh;
+		overflow: hidden;
+	}
+
+	:global(.hero-image img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		display: block;
+	}
+
 	main {
 		max-width: 100%;
 		padding: 0;
 		margin: 0;
 	}
 
-	.hero {
-		min-height: 70vh;
+	.hero-text {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 4em 2em;
-		background-color: var(--cream);
+		padding: 3em 2em;
 	}
 
-	.hero h1 {
+	.hero-text h1 {
 		font-size: 5em;
 		font-family: var(--font-heading);
 		font-weight: 700;
@@ -59,5 +74,15 @@ import Header from '../components/Header.astro';
 		font-size: 1.4em;
 		color: var(--slate-light);
 		margin: 0;
+	}
+
+	@media (max-width: 720px) {
+		:global(.hero-image) {
+			height: 50vh;
+		}
+
+		.hero-text h1 {
+			font-size: 3em;
+		}
 	}
 </style>
