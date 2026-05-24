@@ -19,13 +19,28 @@ import Footer from '../components/Footer.astro';
 					<a href="/about">Play Misty for me</a>
 				</nav>
 			</div>
-			<video class="hero-video" autoplay muted loop playsinline>
+			<video class="hero-video" autoplay muted loop playsinline preload="auto">
 				<source src="/Caio-video-small.mp4" type="video/mp4" />
 			</video>
 			<div class="hero-text">
 				<h1>Play Misty for me</h1>
 				<p class="tagline">Sniff me baby.</p>
 			</div>
+		</div>
+
+		<section class="photo-spread">
+			<div class="polaroid tilt-left">
+				<img src="/Caio-car2.jpg" alt="Caio at the wheel" />
+				<p class="polaroid-caption">I drove all night</p>
+			</div>
+			<div class="polaroid tilt-right">
+				<img src="/Handsome-boy.jpg" alt="Handsome boy" />
+				<p class="polaroid-caption">Handsome boy</p>
+			</div>
+		</section>
+
+		<div class="signature-illustration">
+			<img src="/Caio-illustration.png" alt="Caio" />
 		</div>
 
 		<Footer />
@@ -150,6 +165,62 @@ import Footer from '../components/Footer.astro';
 		text-shadow: 0 1px 8px rgba(0,0,0,0.3);
 	}
 
+	.photo-spread {
+		padding: 6em 4em 4em 4em;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 6em;
+	}
+
+	.polaroid {
+		background: #ffffff;
+		padding: 1em 1em 3.5em 1em;
+		box-shadow: 4px 6px 24px rgba(44,58,71,0.13), 0 1px 3px rgba(44,58,71,0.06);
+		width: 32%;
+		flex-shrink: 0;
+	}
+
+	.polaroid img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 0;
+		max-width: none;
+	}
+
+	.polaroid-caption {
+		font-family: 'Caveat', cursive;
+		font-size: 1.2em;
+		color: #4a5568;
+		text-align: center;
+		margin: 0.8em 0 0 0;
+		padding: 0;
+	}
+
+	.polaroid.tilt-left {
+		transform: rotate(-2.5deg);
+		margin-top: 2.5em;
+	}
+
+	.polaroid.tilt-right {
+		transform: rotate(1.8deg);
+	}
+
+	.signature-illustration {
+		padding: 3em 3em 0 3em;
+		display: flex;
+		justify-content: center;
+	}
+
+	.signature-illustration img {
+		width: 140px;
+		height: auto;
+		display: block;
+		mix-blend-mode: multiply;
+		opacity: 0.85;
+	}
+
 	@media (max-width: 600px) {
 		.hero-wrap {
 			height: 70vh;
@@ -178,6 +249,30 @@ import Footer from '../components/Footer.astro';
 		.tagline {
 			font-size: 0.95em;
 			margin-top: 0.4em;
+		}
+
+		.photo-spread {
+			padding: 3em 2em;
+			gap: 2em;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.polaroid {
+			width: 80%;
+		}
+
+		.polaroid.tilt-left,
+		.polaroid.tilt-right {
+			margin-top: 0;
+		}
+
+		.signature-illustration {
+			padding: 2em 1.5em 0 1.5em;
+		}
+
+		.signature-illustration img {
+			width: 100px;
 		}
 	}
 </style>
