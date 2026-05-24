@@ -129,3 +129,67 @@ input { font-size: 16px; }
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
+
+/* Definition section */
+.definition {
+	padding: 5em 2em;
+	background-color: var(--cream);
+}
+
+.definition-inner {
+	max-width: 700px;
+	margin: 0 auto;
+	border-left: 3px solid var(--slate);
+	padding-left: 2em;
+}
+
+.def-entry {
+	margin: 0 0 0.4em 0;
+	line-height: 1.4;
+}
+
+.def-term {
+	font-family: var(--font-heading);
+	font-size: 1.8em;
+	font-weight: 700;
+	color: var(--slate);
+	margin-right: 0.3em;
+}
+
+.def-phonetic {
+	font-family: var(--font-heading);
+	font-style: italic;
+	font-size: 1em;
+	color: var(--slate-light);
+	margin-right: 0.3em;
+}
+
+.def-partsofspeech {
+	font-family: var(--font-body);
+	font-size: 0.9em;
+	font-style: italic;
+	color: var(--slate-light);
+}
+
+.def-text {
+	font-family: var(--font-heading);
+	font-size: 1.15em;
+	color: var(--slate);
+	line-height: 1.7;
+	margin: 0;
+}
+
+.def-syn {
+	font-style: italic;
+	color: var(--slate-light);
+}
+
+@media (max-width: 600px) {
+	.definition {
+		padding: 3em 1.5em;
+	}
+
+	.def-term {
+		font-size: 1.4em;
+	}
+}

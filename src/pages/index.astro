@@ -25,6 +25,20 @@ import Footer from '../components/Footer.astro';
 				<p class="tagline">The ball won't get itself, Lynne.</p>
 			</div>
 		</div>
+
+		<section class="definition">
+			<div class="definition-inner">
+				<p class="def-entry">
+					<span class="def-term">Sealyham terrier</span>
+					<span class="def-phonetic">/ˈsiːləm ˈtɛrɪə/</span>
+					<span class="def-partsofspeech">n.</span>
+				</p>
+				<p class="def-text">
+					<span class="def-syn">(syn.</span> West Walian dawdling terrier, Niejo, Bandiejo, Gary<span class="def-syn">)</span>. A short, white dog.
+				</p>
+			</div>
+		</section>
+
 		<Footer />
 	</body>
 </html>
@@ -85,12 +99,12 @@ import Footer from '../components/Footer.astro';
 	.hero-logo {
 		display: flex;
 		align-items: center;
-		opacity: 0.9;
+		opacity: 0.6;
 		transition: opacity 0.2s ease;
 	}
 
 	.hero-logo:hover {
-		opacity: 1;
+		opacity: 0.9;
 	}
 
 	.hero-logo img {
@@ -149,7 +163,64 @@ import Footer from '../components/Footer.astro';
 		text-shadow: 0 1px 8px rgba(0,0,0,0.3);
 	}
 
+	.definition {
+		padding: 3.5em 3em;
+		background-color: #faf7f2;
+	}
+
+	.definition-inner {
+		max-width: 700px;
+		margin: 0;
+		border-left: 3px solid #2c3a47;
+		padding-left: 1.5em;
+	}
+
+	.def-entry {
+		margin: 0 0 0.3em 0;
+		line-height: 1.4;
+	}
+
+	.def-term {
+		font-family: 'Fraunces', Georgia, serif;
+		font-size: 1.4em;
+		font-weight: 700;
+		color: #2c3a47;
+		margin-right: 0.3em;
+	}
+
+	.def-phonetic {
+		font-family: 'Fraunces', Georgia, serif;
+		font-style: italic;
+		font-size: 0.9em;
+		color: #4a5568;
+		margin-right: 0.3em;
+	}
+
+	.def-partsofspeech {
+		font-family: 'Lato', system-ui, sans-serif;
+		font-size: 0.85em;
+		font-style: italic;
+		color: #4a5568;
+	}
+
+	.def-text {
+		font-family: 'Fraunces', Georgia, serif;
+		font-size: 1em;
+		color: #2c3a47;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	.def-syn {
+		font-style: italic;
+		color: #4a5568;
+	}
+
 	@media (max-width: 600px) {
+		.hero-wrap {
+			height: 70vh;
+		}
+
 		.hero-header {
 			padding: 1.2em 1.5em;
 		}
@@ -173,6 +244,14 @@ import Footer from '../components/Footer.astro';
 		.tagline {
 			font-size: 0.95em;
 			margin-top: 0.4em;
+		}
+
+		.definition {
+			padding: 2.5em 1.5em;
+		}
+
+		.def-term {
+			font-size: 1.2em;
 		}
 	}
 </style>
