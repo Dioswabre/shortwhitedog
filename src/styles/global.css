@@ -470,6 +470,121 @@ input { font-size: 16px; }
 }
 
 /* =====================
+   ENEMIES LIST
+   ===================== */
+
+.enemies-wrap {
+	padding: 2em 3em 3em 3em;
+}
+
+.notepad {
+	background: #fffef5;
+	border: 1px solid #e8e0cc;
+	box-shadow: 3px 4px 14px rgba(44,58,71,0.10);
+	transform: rotate(0.4deg);
+	position: relative;
+	padding: 1.5em 1.5em 2em 2.5em;
+	background-image: repeating-linear-gradient(
+		transparent,
+		transparent 27px,
+		#d4e4f0 27px,
+		#d4e4f0 28px
+	);
+	background-position: 0 2em;
+}
+
+.notepad-wide {
+	width: 70%;
+		margin: 0 auto;
+}
+
+.notepad-holes {
+	position: absolute;
+	left: 0.6em;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	pointer-events: none;
+}
+
+.notepad-holes span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--cream);
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.notepad-content {
+	position: relative;
+}
+
+.enemies-title {
+	font-family: var(--font-hand);
+	font-size: 1.4em;
+	font-weight: 600;
+	color: var(--slate);
+	margin: 0 0 0.6em 0;
+	line-height: 28px;
+	letter-spacing: 0.05em;
+}
+
+.underline-scrawl {
+	font-family: var(--font-hand);
+	color: var(--slate);
+	letter-spacing: -2px;
+}
+
+.enemies-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-hand);
+	font-size: 1.15em;
+	color: var(--slate);
+}
+
+.enemies-list-wide {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 3em;
+}
+
+.enemies-list-wide li {
+	width: calc(20% - 3em);
+	min-width: 120px;
+}
+
+.enemies-list li {
+	line-height: 28px;
+	padding-left: 0.3em;
+}
+
+.enemies-list li::before {
+	content: '— ';
+	color: var(--slate-light);
+}
+
+.enemy-hector {
+	color: var(--terracotta) !important;
+	font-weight: 600;
+}
+
+.enemy-hector::before {
+	content: '' !important;
+}
+
+.enemy-note {
+	font-size: 0.85em;
+	color: var(--slate-light);
+	font-style: italic;
+}
+
+/* =====================
    MOBILE
    ===================== */
 
@@ -558,5 +673,17 @@ input { font-size: 16px; }
 
 	.def-term {
 		font-size: 1.2em;
+	}
+
+	.enemies-wrap {
+		padding: 2em 1.5em;
+	}
+
+	.enemies-list-wide {
+		gap: 0 1.5em;
+	}
+
+	.enemies-list-wide li {
+		width: calc(50% - 1.5em);
 	}
 }
