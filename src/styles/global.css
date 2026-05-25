@@ -495,7 +495,7 @@ input { font-size: 16px; }
 
 .notepad-wide {
 	width: 70%;
-		margin: 0 auto;
+	margin: 0 auto;
 }
 
 .notepad-holes {
@@ -582,6 +582,67 @@ input { font-size: 16px; }
 	font-size: 0.85em;
 	color: var(--slate-light);
 	font-style: italic;
+}
+
+/* =====================
+   DATING FORM
+   ===================== */
+
+.dating-wrap {
+	padding: 0 3em 4em 3em;
+}
+
+.dating-form {
+	width: 50%;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #d4c9b8;
+	box-shadow: 3px 4px 14px rgba(44,58,71,0.08);
+	transform: rotate(-0.3deg);
+	padding: 1.8em 2em 2em 2em;
+}
+
+.dating-title {
+	font-family: var(--font-body);
+	font-size: 0.7em;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--slate-light);
+	margin: 0 0 1.2em 0;
+	padding-bottom: 0.6em;
+	border-bottom: 2px solid var(--slate);
+}
+
+.dating-fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+}
+
+.dating-field {
+	display: flex;
+	align-items: baseline;
+	padding: 0.5em 0;
+	border-bottom: 1px solid #e8e0cc;
+	gap: 0.8em;
+}
+
+.dating-label {
+	font-family: var(--font-body);
+	font-size: 0.75em;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--slate-light);
+	white-space: nowrap;
+	min-width: 120px;
+}
+
+.dating-answer {
+	font-family: var(--font-hand);
+	font-size: 1.2em;
+	color: var(--slate);
 }
 
 /* =====================
@@ -685,5 +746,17 @@ input { font-size: 16px; }
 
 	.enemies-list-wide li {
 		width: calc(50% - 1.5em);
+	}
+
+	.dating-wrap {
+		padding: 0 1.5em 3em 1.5em;
+	}
+
+	.dating-form {
+		width: 100%;
+	}
+
+	.dating-fields {
+		grid-template-columns: 1fr;
 	}
 }
